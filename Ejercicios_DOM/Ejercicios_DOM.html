@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main_DOM.css">
+    
+    <title>Ejercicios del DOM</title>
+</head>
+<body class="" dark-mode>
+    <header class="header">
+    <h1 class="ejercicios_DOM">Ejercicios del DOM</h1>
+    </header>
+    
+    <!-- Botón del menú Hamburguesa  -->
+    <button class="panel-btn hamburger hamburger--emphatic" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <!-- Botón del Scroll Top  -->
+    <button class="scroll_top oculto">&#11014;</button>
+    
+    <!-- Botón del Dark & Light Mode  🌙-->
+    <button class="dark_n_light"></button>
+
+<aside class="panel">
+<nav class="menu" dark-mode>
+    <a href="#seccion_1" data-scroll-spy>Reloj digital y alarma</a>
+    <a href="#seccion_2" data-scroll-spy>Eventos del teclado</a>
+    <a href="#seccion_3" data-scroll-spy>Countdown</a>
+    <a href="#seccion_4" data-scroll-spy>Responsive con Javascript</a>
+    <a href="#seccion_5" data-scroll-spy>Responsive Tester</a>
+    <a href="#seccion_6" data-scroll-spy>Detección de dispositivos</a>
+    <a href="#seccion_7" data-scroll-spy>Detección de Red</a>
+    <a href="#seccion_8" data-scroll-spy>Detección de cámara Web</a>
+    <a href="#seccion_9" data-scroll-spy>Detección de Geolocalización</a>
+    <a href="#seccion_10" data-scroll-spy>Filtros de búsqueda</a>
+    <a href="#seccion_11" data-scroll-spy>Escoger elemento aleatorio</a>
+    <a href="#seccion_12" data-scroll-spy>Responsive Slider</a>
+    <a href="#seccion_13" data-scroll-spy>Video Inteligente</a>
+    <a href="#seccion_14" data-scroll-spy>Validaciones de Formularios</a>
+    <a href="#seccion_15" data-scroll-spy>Narrador</a>
+</nav>
+</aside>
+
+    <main class="main_wrapper">
+
+    <section id="seccion_1" class="seccion" data-scroll-spy>
+    <h3>Sección 1</h3>
+    <h4>Reloj Digital y Alarma Sonora</h4>
+    <p class="reloj"></p>
+    <div class="botones-relojes">
+        <button class="inicia-reloj" title="Iniciar Reloj">Iniciar Reloj</button>
+        <button class="detiene-reloj" title="Detener Reloj">Detener Reloj</button>
+        <button class="inicia-alarma" title="Iniciar Alarma">Iniciar Alarma</button>
+        <audio src="assets/alarma.mp3" class="alarma" loop>
+        </audio>
+        <button class="detiene-alarma" title="Detener Alarma">Detener Alarma</button>
+    </div>
+</section>
+
+<section id="seccion_2" class="seccion" data-scroll-spy>
+    <h3>Sección 2</h3>
+    <h4>Eventos del teclado</h4>
+    <div class="fondo" id="fondo">
+        <div class="punto" id="boton-punto"></div>
+    </div>
+</section>
+
+<section id="seccion_3" class="seccion" data-scroll-spy>
+    <h3>Sección 3</h3>
+    <h4>Countdown</h4>
+    <p>Ingrese la fecha desde la que quiere hacer la cuenta regresiva</p>
+    <input type="datetime-local" class="fecha" id="horaAFijar">
+    <p class="countdown"></p>
+    <button class="BotonCuentaRegresiva">Verificar</button>
+</section>
+
+<section id="seccion_4" class="seccion" data-scroll-spy>
+    <h3>Sección 4</h3>
+    <h4>Responsive con Javascript</h4>
+    <div id="video"></div>
+    <div id="mapa"></div>
+</section>
+
+<section id="seccion_5" class="seccion" data-scroll-spy>
+    <h3>Sección 5</h3>
+    <h4>Responsive tester</h4>
+    <form class="test" id="responsive-tester">
+        <input name="direccion" type="url" class="URL" placeholder="URL" value="https://www.google.com"><br>
+        <input name="alto" type="number" class="alto" placeholder="Alto (px)" value="800"><br>
+        <input name="ancho" type="number" class="ancho" placeholder="Ancho (px)" value="600"><br><br>
+        <button name="tester" class="tester" id="tester">Revisar</button>
+        <button name="cerrarTester" class="cerrarTester" id="cerrarTester">Cerrar</button>
+    </form>
+</section>
+
+<section id="seccion_6" class="seccion" data-scroll-spy>
+    <h3>Sección 6</h3>
+    <h4>Detección de dispositivos<br><br>User Agent</h4>
+    <div id="user-device"></div>
+</section>
+
+<section id="seccion_7" class="seccion" data-scroll-spy>
+    <h3>Sección 7</h3>
+    <h4>Detección de la Conexión</h4>
+</section>
+
+<section id="seccion_8" class="seccion" data-scroll-spy>
+    <h3>Sección 8</h3>
+    <h4>Detección de cámara Web</h4>
+    <video id="webcam"></video>
+</section>
+
+<section id="seccion_9" class="seccion" data-scroll-spy>
+    <h3>Sección 9</h3>
+    <h4>Detección de Geolocalización</h4>
+    <div id="geolocation"></div>
+
+</section>
+
+<section id="seccion_10" class="seccion" data-scroll-spy>
+    <h3>Sección 10</h3>
+    <h4>Filtros de búsqueda</h4>
+    <input type="text" id="filtrar" placeholder="Filtrar imágenes">
+
+    <section class="cards">
+        <figure class="card">
+            <img src="https://loremflickr.com/200/200/tech" alt="Tech">
+            <figcaption>Tech</figcaption>
+        </figure>
+        <figure class="card">
+            <img src="https://loremflickr.com/200/200/animals" alt="Animals">
+            <figcaption>Animals</figcaption>
+        </figure>
+        <figure class="card">
+            <img src="https://loremflickr.com/200/200/arch" alt="Architecture">
+            <figcaption>Architecture</figcaption>
+        </figure>
+        <figure class="card">
+            <img src="https://loremflickr.com/200/200/people" alt="People">
+            <figcaption>People</figcaption>
+        </figure>
+        <figure class="card">
+            <img src="https://loremflickr.com/200/200/nature" alt="Nature">
+            <figcaption>Nature</figcaption>
+        </figure>
+        <figure class="card">
+            <img src="https://loremflickr.com/200/200" alt="Nature">
+            <figcaption>Any</figcaption>
+        </figure>
+        <figure class="card">
+            <img src="https://loremflickr.com/200/200/rain" alt="Nature">
+            <figcaption>Rain</figcaption>
+        </figure>
+        <figure class="card">
+            <img src="https://loremflickr.com/200/200/plane" alt="Nature">
+            <figcaption>Planes</figcaption>
+        </figure>
+    </section>
+
+</section>
+
+<section id="seccion_11" class="seccion" data-scroll-spy>
+    <h3>Sección 11</h3>
+    <h4>Escoger elemento aleatorio</h4>
+    <section class="seccionAleatorios">
+        <ul class="listaElementos" id="listaElementos">
+            <li>Java</li>
+            <li>Javascript</li>
+            <li>HTML</li>
+            <li>Python</li>
+            <li>CSS</li>
+        </ul>
+    </section>
+    <button class="aleatorio">Elegir elemento aleatorio</button>
+    <h1 class="muestraElemento"></h1>
+    <br><br>
+    <input type="text" id="textoELemento">
+    <button class="agregar">Agregar Un elemento más</button>
+    <button class="eliminar">Eliminar último elemento agregado</button>
+
+</section>
+
+
+
+<section id="seccion_12" class="seccion" data-scroll-spy>
+    <h3>Sección 12</h3>
+    <h4>Responsive Slider</h4>
+    <div class="slider">
+        <div class="slider-slides">
+            <div class="slider-slide active"><img src="https://loremflickr.com/400/400/nature" alt="Nature"></div>
+            <div class="slider-slide">
+                <h4>Diapositiva 2</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero adipisci consectetur corporis nisi
+                    voluptate nihil possimus? Voluptatum alias aliquam repellat optio quaerat mollitia animi sed nisi,
+                    architecto at, quos fugiat.</p>
+            </div>
+            <div class="slider-slide"><img src="https://loremflickr.com/400/400/planes" alt="Planes"></div>
+            <div class="slider-slide">
+                <h4>Diapositiva 4</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero adipisci consectetur corporis nisi
+                    voluptate
+                    nihil possimus? Voluptatum alias aliquam repellat optio quaerat mollitia animi sed nisi, architecto
+                    at, quos
+                    fugiat.</p>
+            </div>
+        </div>
+        <div class="slider-btns">
+            <a href="#" class="prev">&laquo;</a>
+            <a href="#" class="next">&raquo;</a>
+        </div>
+    </div>
+</section>
+
+    <section id="seccion_13" class="seccion" data-scroll-spy>
+        <h3>Sección 13</h3>
+        <h4>Video Inteligente</h4>
+        <video src="assets/MOV_0443.mp4" muted controls loop data-smart-video></video>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <video src="assets/MOV_0443.mp4" muted controls loop data-smart-video></video>
+    </section>
+    
+    <section id="seccion_14" class="seccion" data-scroll-spy>
+        <h3>Sección 14</h3>
+        <h4>Validaciones de formularios</h4>
+        <form class="contact-form" target="_blank" action="https://formsubmit.co/mirandacarrasco01@gmail.com" method="POST">
+            <legend>Envíanos tus comentarios</legend>
+            <input type="text" name="name" placeholder="Escribe tu nombre" title="Nombre solo acepta letras y espacios en blanco"
+                pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúüÜ\s]+$" required>
+            
+            <input type="email" name="email" placeholder="Introduzca su Email" title="Email incorrecto" required
+                pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+            
+            <input type="text" name="subject" placeholder="Asunto a tratar" required title="El asunto es requerido">
+
+            <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" data-pattern="^.{1,255}$" required
+                title="Tu comentaro no debe exceder los 255 caracteres"></textarea>
+            
+            <input type="submit" value="Enviar">
+            
+            <div class="contact-form-loader none">
+                <img src="assets/loader.svg" alt="Cargando">
+            </div>
+            <div class="contact-form-response none">
+                <p>Los datos han sido enviados</p>
+                </div>
+        </form>
+    </section>
+    
+    <section id="seccion_15" class="seccion" data-scroll-spy>
+        <h3>Sección 15</h3>
+        <h4>Narrador</h4>
+        <select id="speech-select">
+            <option value="">--- Elige una Voz ---</option>
+        </select>
+        <br><br>
+        <textarea id="speech-text" placeholder="Ingresa texto para leerlo..." cols="50" rows="5"></textarea>
+        <br><br>
+        <button id="speech-btn">Leer Texto</button>
+    </section>
+
+    </main>
+    <script src="js/main_DOM.js" type="module" defer></script>
+    </body>
+    
+    </html>
